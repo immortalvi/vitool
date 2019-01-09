@@ -1,0 +1,4 @@
+2019-01-09 13:09:48,777 INFO    : this is a info log
+2019-01-09 13:09:48,777 INFO    : this is a info log
+2019-01-09 13:09:48,777 INFO    : this is a info log
+2019-01-09 13:09:48,778 ERROR   : this is a error log

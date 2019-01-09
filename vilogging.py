@@ -5,9 +5,10 @@ import logging.handlers
 import sys
 
 class ViLogging:
-    def __init__(self, logfile):
+    def __init__(self, logfile, maxfile=5):
         self.logfile = logfile
         self.logcounter = 0
+        self.maxfile = maxfile
         self.logger = self.initlogging()
         
     def initlogging(self):
@@ -20,7 +21,7 @@ class ViLogging:
         
         # 文件日志, 定义一个RotatingFileHandler，最多备份5个日志文件，每个日志文件最大10M
         #file_handler = logging.FileHandler(self.logfile)
-        file_handler = logging.handlers.RotatingFileHandler(self.logfile, maxBytes=1024*1024, backupCount=5)
+        file_handler = logging.handlers.RotatingFileHandler(self.logfile, maxBytes=1024*1024, backupCount=self.maxfile)
         file_handler.setFormatter(formatter)  # 可以通过setFormatter指定输出格式
         
         # 控制台日志
