@@ -1,5 +1,5 @@
 # import the necessary packages
-from webcamvideostream import WebcamVideoStream
+from .webcamvideostream import WebcamVideoStream
 
 class VideoStream:
 	def __init__(self, src=0, useIPCamera=False):
